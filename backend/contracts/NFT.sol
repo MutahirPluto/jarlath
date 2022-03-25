@@ -15,7 +15,7 @@ contract NFT is ERC721 , Ownable{
 
        uint256 public maxSupply = 5260;
 
-       uint256 public rarity0;//0
+    uint256 public rarity0;//0
     uint256 public rarity1;//1
     uint256 public rarity2;//2
     uint256 public rarity3;//3
@@ -121,7 +121,7 @@ contract NFT is ERC721 , Ownable{
     }
 
      //returns the total number of Nfts minted from this contract
-    function totalSupply() private view returns(uint256){
+    function totalSupply() public view returns(uint256){
         return _tokenIds.current();
     }
 
